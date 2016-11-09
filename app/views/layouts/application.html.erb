@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsYelpMvp</title>
+    <title><%= yield(:title).blank? ? "YELP" : yield(:title) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,7 +12,9 @@
   </head>
 
   <body>
+    <div class="navbar-wagon">
+      <h1><%= link_to 'YELP', root_path %></h1>
+    </div>
     <%= yield %>
   </body>
 </html>
-s

@@ -1,1 +1,11 @@
 @import "home";
+
+.index {
+  display: flex;
+  align-items: baseline;
+  justify-content: initial;
+}
+
+.index p {
+      margin-left: 10px;
+}

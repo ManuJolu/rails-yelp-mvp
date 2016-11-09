@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="text-center">Hi ! Welcome in Yelp </h2>
+  <hr>
+  <h4 class="text-center"><%= link_to 'Add a restaurant', new_restaurant_path %></h4>
+  <hr>
+  <% @restaurants.each do |restaurant| %>
+    <div class="index">
+      <h3><%= link_to restaurant.name.capitalize, restaurant %></h3>
+      <p><%= restaurant.category.capitalize %></p>
+      <p><%= restaurant.avg_stars %></p>
+    </div>
+  <% end %>
+</div>

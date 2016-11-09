@@ -1,0 +1,12 @@
+<div class="container">
+  <%= simple_form_for (@restaurant) do |f| %>
+    <%= f.error_notification %>
+
+    <%= f.input :name, placeholder: "L'Evidence Café" %>
+    <%= f.input :address, placeholder: "37 rue Nationale 56300 Pontivy" %>
+    <%= f.input :phone_number, placeholder: "02 97 03 09 04" %>
+    <%= f.input :category, collection: Restaurant::CATEGORY, as: :radio_buttons %>
+
+    <%= f.button :submit %>
+  <% end %>
+</div>
